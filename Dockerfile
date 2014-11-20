@@ -1,4 +1,4 @@
-FROM debian:squeeze
+FROM debian:wheezy
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -21,10 +21,8 @@ RUN apt-get install -y zlib1g zlib1g-dev libssl-dev libcurl4-openssl-dev libexpa
 RUN apt-get -y install libmysqlclient-dev
 RUN apt-get -y install libxslt1-dev
 RUN apt-get -y install libpq-dev
-RUN apt-get -y install ps-watcher
 
 #Install SQL and Ruby
-ADD sql_install /tmp
-RUN chmod u+x /tmp/sqlInstall.sh
-RUN /tmp/sqlInstall.sh
-
+#ADD sql_install /tmp
+#RUN chmod u+x /tmp/sqlInstall.sh
+#RUN /tmp/sqlInstall.sh
