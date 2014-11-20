@@ -21,5 +21,5 @@ RUN apt-get -y install libmysqlclient-dev
 RUN apt-get -y install libxslt1-dev
 RUN apt-get -y install libpq-dev
 ADD sql_install /tmp
-RUN chmod u+x /tmp/sql_install/sqlInstall.sh
-RUN /tmp/sql_install/sqlInstall.sh
+RUN chmod u+x /tmp/sqlInstall.sh
+RUN /tmp/sqlInstall.sh
