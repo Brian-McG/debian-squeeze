@@ -1,4 +1,4 @@
-FROM debian:sqeeze
+FROM debian:squeeze
 
 ENV DEBIAN_FRONTEND noninteractive
 
