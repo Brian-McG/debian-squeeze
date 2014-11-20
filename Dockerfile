@@ -20,7 +20,7 @@ RUN apt-get install -y zlib1g zlib1g-dev libssl-dev libcurl4-openssl-dev libexpa
 RUN apt-get -y install libmysqlclient-dev
 RUN apt-get -y install libxslt1-dev
 RUN apt-get -y install libpq-dev
+RUN mkdir /tmp/sql_install
 ADD sqlInstall.sh /tmp/sql_install
-RUN cd /tmp/sql_install
-RUN chmod u+x sqlInstall.sh
-RUN ./sqlInstall.sh
+RUN chmod u+x /tmp/sql_install/sqlInstall.sh
+RUN /tmp/sql_install/sqlInstall.sh
